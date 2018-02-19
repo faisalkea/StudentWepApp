@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Edit</title>
+    <link rel="stylesheet" type="text/css" th:href="@{Styles.css}"/>
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div class="container">
+    <h1>Edit student</h1>
+    <form method="Post" th:action="@{/edit}">
+        <!-- <p>Enter student id</p>
+         <input   type="number" name="ID" th:field="${student.studentID}"  />-->
+        <p>Enter first name</p>
+        <input type="text" th:field="${student.firstName}"/>
+        <p>Enter last name</p>
+        <input type="text" th:field="${student.lastName}"/>
+        <p>Enter enrollementdate</p>
+        <input type="date" th:field="${student.enrollmentDate}"/>
+        <p>Enter cpr</p>
+        <input type="text" th:field="${student.cpr}"/>
+
+        <input class="btn btn-primary" type="submit" value="Send"/>
+    </form>
+</div>
+<script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Details</title>
+    <link rel="stylesheet" type="text/css" th:href="@{Styles.css}"/>
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div class="container">
+    <h1>Details</h1>
+    <p th:text="'ID: ' + ${student.studentId}"></p>
+    <p th:text="'First Name: ' + ${student.firstName}"></p>
+    <p th:text="'LastName: ' + ${student.lastName}"></p>
+    <p th:text="'Enrollment Date: ' + ${student.enrollmentDate}"></p>
+    <p th:text="'CPR: ' + ${student.cpr}"></p>
+
+    <h2 th:text="'Enrollments for ' + ${student.firstName} + ' ' + ${student.lastName}"></h2>
+    <p>The content here will come later</p>
+</div>
+<script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+</body>
+</html>
