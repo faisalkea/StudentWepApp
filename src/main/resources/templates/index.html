@@ -22,7 +22,7 @@
             <th>Last Name</th>
             <th>Enrollment Date</th>
             <th>Cpr</th>
-            <th></th>
+            <th>Settings</th>
         </tr>
         </thead>
         <tbody>
@@ -32,16 +32,15 @@
             <td th:text="${student.lastName}"/>
             <td th:text="${student.enrollmentDate}"/>
             <td th:text="${student.cpr}"/>
-            <td/>
             <td>
-                <a th:href="${'details/' + student.studentId}">
-                    <button class="btn btn-info">details</button>
+                <a class="glyphicon glyphicon-cog" th:href="${'details/' + student.studentId}">
+                    <!--<button class="btn btn-info glyphicon glyphicon-cog">details</button>-->
                 </a>
-                <a th:href="${'edit/' + student.studentId}">
-                    <button class="btn btn-warning">edit</button>
+                <a class="glyphicon glyphicon-pencil" th:href="${'edit/' + student.studentId}">
+                    <!--<button class="btn btn-warning glyphicon glyphicon-pencil">edit</button>-->
                 </a>
-                <a th:href="${'delete/' + student.studentId}">
-                    <button class="btn btn-danger">delete</button>
+                <a class="glyphicon glyphicon-remove" th:href="${'delete/' + student.studentId}">
+                    <!--<button class="btn btn-danger glyphicon glyphicon-remove">delete</button>-->
                 </a>
             </td>
         </tr>
@@ -50,7 +49,7 @@
     </table>
     <div>
         <a href="create.html">
-            <button class="btn btn-primary">create</button>
+            <button class="btn btn-primary">Create new student</button>
         </a>
     </div>
 </div>

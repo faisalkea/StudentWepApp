@@ -22,7 +22,6 @@ public class Student {
         this.lastName = lastName;
         this.cpr = cpr;
         this.enrollmentDate = date;
-
     }
 
     public Student(int studentId) {
