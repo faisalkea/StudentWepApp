@@ -2,10 +2,17 @@ package com.example.demo;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
 
+@Entity
 public class Student {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int studentId;
     private String firstName;
     private String lastName;
@@ -67,4 +74,16 @@ public class Student {
     public void setEnrollmentDate(Date enrollmentDate) {
         this.enrollmentDate = enrollmentDate;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentId=" + studentId +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", cpr='" + cpr + '\'' +
+                ", enrollmentDate=" + enrollmentDate +
+                '}';
+    }
+
 }
