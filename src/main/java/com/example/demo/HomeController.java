@@ -103,4 +103,10 @@ public class HomeController {
         return "redirect:/";
     }
 
+    @GetMapping("/test/{id}")
+    public String test(@PathVariable int id) {
+        log.info("delete test action called id: " + id);
+        return "redirect:/";
+    }
+
 }
