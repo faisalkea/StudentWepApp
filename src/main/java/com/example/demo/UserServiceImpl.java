@@ -26,8 +26,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public ArrayList<Student> fetchAllUsers() {
-        return students;
+    public List<Student> fetchAllUsers() {
+        return userRepo.findAll();
+        //return students;
     }
 
     @Override

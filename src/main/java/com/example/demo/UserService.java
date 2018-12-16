@@ -1,10 +1,10 @@
 package com.example.demo;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public interface UserService {
 
-    ArrayList<Student> fetchAllUsers();
+    List<Student> fetchAllUsers();
     void save(Student stud);
     void update(Student stud);
     void delete(int id);

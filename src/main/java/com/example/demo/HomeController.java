@@ -19,6 +19,8 @@ public class HomeController {
 
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 
+    private final String INDEX = "index";
+
     @Autowired
     UserServiceImpl userService;
 
@@ -33,7 +35,7 @@ public class HomeController {
         log.info("FIND user by firstName and lastname: " + userService.findByName("Faisal", "Jarkass"));
 
         log.info("index action ended...");
-        return "index";
+        return INDEX;
     }
 
     @GetMapping("/create")
